@@ -18,8 +18,8 @@
 - [x] 2023
 - [x] bottle2
   - [x] bottle2-v1
-- [x] bubble（缺几张`bigbabol`的 gif 图）
-- [x] bubble-v2（缺几张`bigbabol`的 gif 图）
+- [x] bubble
+- [x] bubble-v2
 - [x] 525
 - [x] 705
 - [x] 708
@@ -45,6 +45,14 @@
 | ![game-tips-2.old.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-2.old.png)<br/>**game-tips-2.old.png** | ![game-tips-2.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-2.png)<br/>**game-tips-2.png** |
 | ![game-tips-3.old.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-3.old.png)<br/>**game-tips-3.old.png** | ![game-tips-3.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-3.png)<br/>**game-tips-3.png** |
 | ![game-tips-4.old.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-4.old.png)<br/>**game-tips-4.old.png** | ![game-tips-4.png](./cpe-oss-h5.oss-cn-shenzhen.aliyuncs.com/h5/202507/vvv/image/background/game-tips-4.png)<br/>**game-tips-4.png** |
+| ![1.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\1.old.png)<br/>**1.old**                                                     | ![1.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\1.png)<br/>**1.png**                                             |
+| ![2.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\2.old.png)<br/>**2.old**                                                     | ![2.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\2.png)<br/>**2.png**                                             |
+| ![3.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\3.old.png)<br/>**3.old**                                                     | ![3.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\3.png)<br/>**3.png**                                             |
+| ![4.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\4.old.png)<br/>**4.old**                                                     | ![4.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\4.png)<br/>**4.png**                                             |
+| ![5.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\5.old.png)<br/>**5.old**                                                     | ![5.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\5.png)<br/>**5.png**                                             |
+| ![6.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\6.old.png)<br/>**6.old**                                                     | ![6.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\6.png)<br/>**6.png**                                             |
+| ![7.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\7.old.png)<br/>**7.old**                                                     | ![7.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\7.png)<br/>**7.png**                                             |
+| ![8.old](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\8.old.png)<br/>**8.old**                                                     | ![8.png](./cpe-app-oss.oss-cn-shenzhen.aliyuncs.com\h5\18th-h5\road\8.png)<br/>**8.png**                                             |
 
 ## API 历史
 
