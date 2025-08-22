@@ -97,9 +97,9 @@ func runWget(url string) error {
 	}
 
 	// 构造wget.exe的完整路径
-	wgetPath := filepath.Join(exeDir, "wget.exe")
-	if runtime.GOOS != "windows" {
-		wgetPath = filepath.Join(exeDir, "wget") // 非Windows系统
+	wgetPath := "wget"
+	if runtime.GOOS == "windows" {
+		wgetPath = filepath.Join(exeDir, "wget.exe") // 非Windows系统
 	}
 
 	cmd := exec.Command(wgetPath,
