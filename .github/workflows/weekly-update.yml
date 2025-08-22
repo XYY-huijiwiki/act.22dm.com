@@ -1,0 +1,47 @@
+name: Weekly Update
+
+on:
+  schedule:
+    - cron: "0 16 * * 5" # Runs at 16:00 UTC Friday (00:00 Saturday China Standard Time)
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  weekly-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.24.6"
+
+      - name: Run download script
+        run: go run download.go
+
+      - name: Get Chinese date string
+        run: echo "DATE=$(TZ='Asia/Shanghai' date +%Y-%m-%d)" >> $GITHUB_ENV
+
+      - name: Rename index file
+        run: |
+          if [ -f "act.22dm.com/index.html" ]; then
+            mv "act.22dm.com/index.html" "act.22dm.com/index.${{ env.DATE }}.html"
+          fi
+
+      - name: Clean up OSS directory
+        run: |
+          if [ -d "act.22dm.com/cpe-app-oss.oss-cn-shenzhen.aliyuncs.com" ]; then
+            rm -rf "act.22dm.com/cpe-app-oss.oss-cn-shenzhen.aliyuncs.com"
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Weekly updates: ${{ env.DATE }}" || echo "No changes to commit"
+          git push
