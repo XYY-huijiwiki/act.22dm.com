@@ -5,6 +5,9 @@ on:
     - cron: "0 16 * * 5" # Runs at 16:00 UTC Friday (00:00 Saturday China Standard Time)
   workflow_dispatch: # Allow manual triggering
 
+permissions:
+  contents: write
+
 jobs:
   weekly-update:
     runs-on: ubuntu-latest
