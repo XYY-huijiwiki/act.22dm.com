@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script type="module" src="assets/polyfills-modern-ec6b5914.js"></script>
+
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="ixyy" />
+        <meta name="description" content="ixyy" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=750,maximum-scale=1.0,user-scalable=0" />
+        <meta name="screen-orientation" content="portrait" />
+        <meta name="x5-orientation" content="portrait" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <title>喜羊羊与灰太狼</title>
+        <link rel="icon" href="assets/favicon-2d395d36.ico" />
+        <script>
+            // 处理 Uncaught ReferenceError: global is not defined 的问题
+            if (window.global === undefined) {
+                window.global = window
+            }
+        </script>
+        <script>
+            var _hmt = _hmt || []
+            ;(function () {
+                var hm = document.createElement('script')
+                hm.src = 'https://hm.baidu.com/hm.js?b660e32e2a1c74655af069375b17f4d4'
+                var s = document.getElementsByTagName('script')[0]
+                s.parentNode.insertBefore(hm, s)
+            })()
+        </script>
+        <style>
+            /* 只在移动设备上限制横屏 - 使用触摸设备检测 */
+            @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+                body {
+                    overflow: hidden;
+                }
+                #app {
+                    display: none !important;
+                }
+                .landscape-tip {
+                    display: flex !important;
+                }
+            }
+            /* 竖屏时显示页面（移动设备） */
+            @media screen and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+                #app {
+                    display: block !important;
+                }
+                .landscape-tip {
+                    display: none !important;
+                }
+            }
+            /* PC端始终显示页面 */
+            @media (hover: hover) and (pointer: fine) {
+                #app {
+                    display: block !important;
+                }
+                .landscape-tip {
+                    display: none !important;
+                }
+            }
+            /* 横屏提示层 */
+            .landscape-tip {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.9);
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 99999;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .landscape-tip-icon {
+                font-size: 60px;
+                margin-bottom: 30px;
+                animation: rotate 2s linear infinite;
+            }
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .landscape-tip-text {
+                line-height: 1.6;
+            }
+        </style>
+        <script>
+            // 检测是否为移动设备
+            function isMobileDevice() {
+                // 检测触摸支持
+                var hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+                // 检测屏幕宽度（移动设备通常小于768px）
+                var isSmallScreen = window.innerWidth <= 768
+                // 检测 user agent
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera
+                var isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+                    userAgent.toLowerCase(),
+                )
+
+                return hasTouch && (isSmallScreen || isMobileUA)
+            }
+
+            // 检测屏幕方向并显示提示（仅在移动设备上）
+            function checkOrientation() {
+                // 只在移动设备上执行检测
+                if (!isMobileDevice()) {
+                    var tipElement = document.getElementById('landscape-tip')
+                    if (tipElement) {
+                        tipElement.style.display = 'none'
+                    }
+                    return
+                }
+
+                var isLandscape = window.innerWidth > window.innerHeight
+                var tipElement = document.getElementById('landscape-tip')
+
+                if (isLandscape) {
+                    // 横屏时显示提示
+                    if (tipElement) {
+                        tipElement.style.display = 'flex'
+                    }
+                } else {
+                    // 竖屏时隐藏提示
+                    if (tipElement) {
+                        tipElement.style.display = 'none'
+                    }
+                }
+            }
+
+            // 页面加载完成后检测
+            window.addEventListener('load', function () {
+                checkOrientation()
+            })
+
+            // 监听屏幕方向变化（仅在移动设备上）
+            window.addEventListener('orientationchange', function () {
+                setTimeout(function () {
+                    checkOrientation()
+                }, 100)
+            })
+
+            // 监听窗口大小变化（兼容某些浏览器）
+            window.addEventListener('resize', function () {
+                setTimeout(function () {
+                    checkOrientation()
+                }, 100)
+            })
+
+            // 使用新的 Screen Orientation API
+            if (screen.orientation) {
+                screen.orientation.addEventListener('change', function () {
+                    setTimeout(function () {
+                        checkOrientation()
+                    }, 100)
+                })
+            }
+        </script>
+        
+        <script src="../res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+      <script type="module" crossorigin src="assets/index-10e1dbb6.js"></script>
+      <link rel="stylesheet" href="assets/index-51b9ef45.css">
+      <script type="module">try{import("_").catch(()=>1);}catch(e){}window.__vite_is_dynamic_import_support=true;</script>
+      <script type="module">!function(){if(window.__vite_is_dynamic_import_support)return;console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <!-- 横屏提示层 -->
+        <div id="landscape-tip" class="landscape-tip">
+            <div class="landscape-tip-icon">📱</div>
+            <div class="landscape-tip-text">
+                <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px">温馨提示</div>
+                <div>为了更好的体验，请将手机屏幕锁定为竖屏</div>
+            </div>
+        </div>
+      <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+      <script nomodule id="vite-legacy-polyfill" src="assets/polyfills-legacy-70c5647d.js"></script>
+      <script nomodule id="vite-legacy-entry" data-src="/assets/index-legacy.71e9f807.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+    </body>
+</html>
